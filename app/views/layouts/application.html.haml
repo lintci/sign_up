@@ -6,6 +6,9 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Signup'}"}
     = favicon_link_tag 'dryer-circle.png', type: 'image/png'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
+    = render 'layouts/tracking'
+
     -# Modernizr is required for Zurb Foundation
     = javascript_include_tag 'vendor/modernizr'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -23,4 +26,7 @@
       = yield
 
       %footer
+        .row
+          .small-12.columns
+            &copy; 2014 LintCI
 

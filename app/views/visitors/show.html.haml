@@ -2,14 +2,12 @@
   .row
     = form_for @visitor do |form|
       .medium-4.small-12.columns
-        %h1
+        %h2
           %small
             Be the first to get notified
-        %h6
-          %small
-            Your email is safe, we will never spam
+
       .medium-8.small-12.columns.end
-        .row.collapse
+        .row.collapse.signup
           .medium-8.small-12.columns
             = form.email_field :email, placeholder: 'you@example.com'
           .medium-4.small-12.columns
