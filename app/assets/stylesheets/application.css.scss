@@ -14,6 +14,12 @@
 @import "application/fonts";
 @import "framework_and_overrides";
 
+.tagline {
+  h2 {
+    color: $primary-color;
+  }
+}
+
 .call-to-action {
   background: url(image-path('bg/halftone.png'));
 

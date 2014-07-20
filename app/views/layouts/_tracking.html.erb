@@ -8,4 +8,7 @@
   ga('create', 'UA-53014718-1', 'auto');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
+  <% if flash[:notice] == "You've been added! We'll let you know when it's ready!" %>
+    ga('send', 'event', 'Conversion', 'Sign Up');
+  <% end %>
 </script>
