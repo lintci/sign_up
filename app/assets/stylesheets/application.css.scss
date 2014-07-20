@@ -9,7 +9,48 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+
+@import "application/fonts";
+@import "framework_and_overrides";
+
+.call-to-action {
+  background: url(image-path('bg/halftone.png'));
+}
+
+.proposition {
+  h3 {
+    color: #183152;
+  }
+}
+
+$text-color: #eee;
+.language-and-tools {
+  background: #183152;
+
+  h4 {
+    color: $text-color;
+  }
+
+  ul {
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0;
+  }
+
+  li {
+    width: 25%;
+    float: left;
+    display: inline;
+    color: $text-color;
+
+    @media #{$small-only} {
+      width: 50%;
+    }
+  }
+
+  a, a:visited, a:hover {
+    color: $text-color;
+  }
+}
+

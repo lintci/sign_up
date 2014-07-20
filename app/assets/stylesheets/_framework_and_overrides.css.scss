@@ -1,5 +1,14 @@
+$body-font-family: "Roboto Regular", "sans-serif";
+
+$primary-color: #375D81;
+
 // import the CSS framework
 @import "foundation";
+
+main {
+  background: url(image-path("bg/crossword.png")) #fff repeat;
+  padding: 15px 0 0;
+}
 
 // override for the 'Home' navigation link
 .top-bar .name {
@@ -40,8 +49,8 @@
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
-  }
+  background-color: #fff;
+}
 section {
   @extend .row;
   margin-top: 20px;
@@ -64,15 +73,6 @@ section {
 }
 .authform form p {
   font-size: rem-calc(13);
-}
-.authform .form-group {
-  // for Bootstrap, not used for Foundation
-}
-.authform .form-control {
-  // for Bootstrap, not used for Foundation
-}
-.authform .checkbox {
-  // for Bootstrap, not used for Foundation
 }
 .authform fieldset {
   @include panel();

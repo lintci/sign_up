@@ -1,0 +1,56 @@
+.call-to-action
+  .row
+    = form_for @visitor do |form|
+      .medium-4.small-12.columns
+        %h1
+          %small
+            Be the first to get notified
+        %h6
+          %small
+            Your email is safe, we will never spam
+      .medium-8.small-12.columns.end
+        .row.collapse
+          .medium-8.small-12.columns
+            = form.email_field :email, placeholder: 'you@example.com'
+          .medium-4.small-12.columns
+            = form.submit 'Keep Me Updated', class: 'postfix button expand'
+
+.proposition
+  .row.full-width
+    .medium-4.small-12.columns
+      %h3 Automatic Code Review
+      %p Automatically have your pull requests checked for stylistic violations and buggy code. That leaves you time to focus on higher level questions, like does this code do what it's suppose to do.
+
+    .medium-4.small-12.columns
+      %h3 Lint Your Whole Stack
+      %p Regardless of the language you use, always get useful feedback to maintain a consistent, readable, and hopefully bug free code base.
+
+    .medium-4.small-12.columns
+      %h3 Use the Tools You Love
+      %p Use the tools you're already familiar with. We'll run them for you and automatically pick up any special configuration you might have.
+
+.language-and-tools
+  .row
+    .small-12.columns
+      %h4
+        Language / Tool
+      :markdown
+        * [Ruby](https://www.ruby-lang.org/) / [Rubocop](http://batsov.com/rubocop/)
+        * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) / [JSHint](http://www.jshint.com/)
+        * [Java](https://www.java.com/) / [Checkstyle](http://checkstyle.sourceforge.net/)
+        * [Python](https://www.python.org/) / [pep8](https://pypi.python.org/pypi/pep8)
+        * [Scala](http://www.scala-lang.org/) / [Scalastyle](http://www.scalastyle.org/)
+        * [Clojure](http://clojure.org/) / [Eastwood](https://github.com/jonase/eastwood)
+        * [Haskell](http://www.haskell.org/haskellwiki/Haskell) / [HLint](http://community.haskell.org/~ndm/darcs/hlint/hlint.htm)
+        * [Go](http://golang.org/) / [golint](https://github.com/golang/lint)
+        * [C](http://en.wikipedia.org/wiki/C_(programming_language)) / [Cppcheck](http://cppcheck.sourceforge.net/)
+        * [C++](http://en.wikipedia.org/wiki/C%2B%2B) / [Cppcheck](http://cppcheck.sourceforge.net/)
+        * [C#](http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx) / [Gendarme](http://www.mono-project.com/Gendarme)
+        * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) / [csslint](http://csslint.net/)
+        * [SCSS](http://sass-lang.com/) / [scss-lint](https://github.com/causes/scss-lint)
+        * [JSON](http://json.org/) / [jsonlint](https://github.com/zaach/jsonlint)
+        * [YAML](http://www.yaml.org/) / [Psych](https://github.com/tenderlove/psych)
+        * [XML](http://www.w3.org/XML/) / [xmllint](http://xmlsoft.org/xmllint.html)
+        * [PNG](http://www.w3.org/TR/PNG/) / [OptiPNG](http://optipng.sourceforge.net/)
+        * [JPEG](http://en.wikipedia.org/wiki/JPEG) / [jpegtran](http://jpegclub.org/)
+        * [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) / [svgo](https://github.com/svg/svgo)

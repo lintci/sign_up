@@ -4,23 +4,14 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Signup'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Signup'}"}
-    = favicon_link_tag 'dryer-circle.png', type: 'image/png'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     -# Modernizr is required for Zurb Foundation
     = javascript_include_tag 'vendor/modernizr'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    %header
+      = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
-
-      %header
-        .row
-          .small-5.small-centered.medium-3.columns
-            %h1
-              = image_tag('lintci-logo-vert.svg', class: 'logo', alt: 'LintCI')
-
       = yield
-
-      %footer
-
