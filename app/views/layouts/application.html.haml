@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Signup'
+    %title= content_for?(:title) ? yield(:title) : 'LintCI - Sign Up'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Signup'}"}
     = favicon_link_tag 'dryer-circle.png', type: 'image/png'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
@@ -28,5 +28,6 @@
       %footer
         .row
           .small-12.columns
-            &copy; 2014 LintCI
+            %p
+              &copy; 2014 LintCI
 
