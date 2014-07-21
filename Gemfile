@@ -21,6 +21,7 @@ gem 'unicorn'
 gem 'unicorn-rails'
 gem 'redcarpet'
 gem 'rails_12factor', group: :production
+gem 'newrelic_rpm'
 
 group :development do
   gem 'better_errors'

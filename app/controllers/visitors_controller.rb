@@ -4,7 +4,7 @@ class VisitorsController < ApplicationController
   end
 
   def create
-    @visitor = Visitor.new(visitor_params)
+    @visitor = Visitor.where(visitor_params).first_or_initialize
 
     if @visitor.save
       redirect_to root_path, notice: "You've been added! We'll let you know when it's ready!"
