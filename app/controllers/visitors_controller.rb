@@ -1,4 +1,12 @@
 class VisitorsController < ApplicationController
+  before_filter :authenticate_user!, only: :index
+  after_action :verify_authorized, only: :index
+
+  def index
+    @visitors = Visitor.all
+    authorize Visitor
+  end
+
   def show
     @visitor = Visitor.new
   end
