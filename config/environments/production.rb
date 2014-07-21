@@ -26,6 +26,8 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.static_cache_control = 'public, max-age=2592000'
 
+  config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
