@@ -5,6 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : 'LintCI - Sign Up'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'LintCI provides static analysis for teams. Automate the tedious parts of code review in pull requests using your favorite tools for all the languages you use.'}"}
     %meta{:name => "language", :content => "english"}
+    %meta{'http-equiv' => "content-language", :content => "en-us"}
     = favicon_link_tag 'lintci-icon.png', type: 'image/png'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 
