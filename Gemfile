@@ -14,6 +14,7 @@ gem 'devise_invitable'
 gem 'foundation-rails'
 gem 'haml-rails'
 gem 'pg'
+gem 'redis-rails'
 gem 'pundit'
 gem 'sendgrid'
 gem 'simple_form'
@@ -22,6 +23,7 @@ gem 'unicorn-rails'
 gem 'redcarpet'
 gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
+gem 'sentry-raven'
 
 group :development do
   gem 'better_errors'

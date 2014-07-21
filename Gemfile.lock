@@ -76,6 +76,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.1)
       i18n (~> 0.5)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     foreman (0.74.0)
       dotenv (~> 0.11.1)
@@ -90,6 +92,7 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
+    hashie (3.2.0)
     hike (1.2.3)
     hpricot (0.8.6)
     html2haml (1.0.1)
@@ -117,6 +120,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     newrelic_rpm (3.9.0.229)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
@@ -165,6 +169,23 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     redcarpet (3.1.2)
+    redis (3.1.0)
+    redis-actionpack (4.0.0)
+      actionpack (~> 4)
+      redis-rack (~> 1.5.0)
+      redis-store (~> 1.1.0)
+    redis-activesupport (4.0.0)
+      activesupport (~> 4)
+      redis-store (~> 1.1.0)
+    redis-rack (1.5.0)
+      rack (~> 1.5)
+      redis-store (~> 1.1.0)
+    redis-rails (4.0.0)
+      redis-actionpack (~> 4)
+      redis-activesupport (~> 4)
+      redis-store (~> 1.1.0)
+    redis-store (1.1.4)
+      redis (>= 2.2)
     rspec-core (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.2)
@@ -200,6 +221,10 @@ GEM
       websocket (~> 1.0.4)
     sendgrid (1.2.0)
       json
+    sentry-raven (0.9.4)
+      faraday (>= 0.7.6)
+      hashie (>= 1.1.0)
+      uuidtools
     sexp_processor (4.4.3)
     simple_form (3.0.2)
       actionpack (~> 4.0)
@@ -235,6 +260,7 @@ GEM
     unicorn-rails (2.1.1)
       rack
       unicorn
+    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -271,11 +297,13 @@ DEPENDENCIES
   rails_12factor
   rails_layout
   redcarpet
+  redis-rails
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
   sendgrid
+  sentry-raven
   simple_form
   spring
   turbolinks
