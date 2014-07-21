@@ -15,6 +15,7 @@ gem 'foundation-rails'
 gem 'haml-rails'
 gem 'pg'
 gem 'redis-rails'
+gem 'rack-cache'
 gem 'pundit'
 gem 'sendgrid'
 gem 'simple_form'
@@ -39,6 +40,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do

@@ -9,9 +9,6 @@
 
     = render 'layouts/tracking'
 
-    -# Modernizr is required for Zurb Foundation
-    = javascript_include_tag 'vendor/modernizr'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %main{:role => "main"}
@@ -31,3 +28,5 @@
             %p
               &copy; 2014 LintCI
 
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'application'
