@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  constraints subdomain: 'www' do
-    get ':any', to: redirect(subdomain: nil, path: '/%{any}'), any: /.*/
+  constraints subdomain: nil do
+    get ':any', to: redirect(subdomain: 'www', path: '/%{any}'), any: /.*/
   end
 
   root to: 'visitors#show'
