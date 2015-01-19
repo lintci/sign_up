@@ -28,6 +28,7 @@ gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
 gem 'sentry-raven'
 gem 'le'
+gem "skylight"
 
 group :development do
   gem 'better_errors'
