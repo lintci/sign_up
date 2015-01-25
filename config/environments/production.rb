@@ -104,19 +104,18 @@ Rails.application.configure do
   config.logger = Le.new(Rails.application.secrets.logentries_token)
   config.logger.formatter = proc do |severity, timestamp, _, message|
     data = {severity: severity, timestamp: timestamp}
+
     if message.is_a? Hash
       data.merge!(message)
     else
       data.merge!(message: message)
     end
+
     JSON.dump(data)
   end
+
   config.lograge.enabled = true
-  config.lograge.logger = Le.new(Rails.application.secrets.logentries_token)
-  config.lograge.logger.formatter = proc do |_, _, _, message|
-    message
-  end
-  config.lograge.formatter = Lograge::Formatters::Json.new
+  config.lograge.formatter = Lograge::Formatters::Raw.new
   config.lograge.custom_options = lambda do |event|
     params = event.payload[:params].reject do |key|
       %w(controller action).include?(key)
