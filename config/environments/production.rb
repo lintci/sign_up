@@ -115,6 +115,7 @@ Rails.application.configure do
   end
 
   config.lograge.enabled = true
+  config.lograge.logger = config.logger
   config.lograge.formatter = Lograge::Formatters::Raw.new
   config.lograge.custom_options = lambda do |event|
     params = event.payload[:params].reject do |key|
