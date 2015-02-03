@@ -102,7 +102,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.logger = Le.new(ENV['LOGENTRIES_TOKEN'])
-  config.log_formatter = proc do |severity, timestamp, _, message|
+  config.logger.formatter = proc do |severity, timestamp, _, message|
     data = {severity: severity, timestamp: timestamp}
 
     if message.is_a? Hash
