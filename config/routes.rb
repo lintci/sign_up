@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     get ':any', to: redirect(subdomain: 'www', path: '/%{any}'), any: /.*/
   end
 
+  get 'up', to: 'health_checks#index'
+
   root to: 'visitors#show'
 
   resources :visitors, only: [:index, :create]
